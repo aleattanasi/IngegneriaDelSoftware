@@ -13,6 +13,5 @@ env:
     - COMMIT=${TRAVIS_COMMIT::8}
 
 before_install:
-- docker network create t_network
-- docker run --network t_network -it --rm -v "$PWD":/usr/src/project -w /usr/src/project gradle gradle -q build --info
+- docker run --network my_net -it --rm -v "$PWD":/usr/src/project -w /usr/src/project gradle gradle -q build --info
 
