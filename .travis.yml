@@ -16,7 +16,7 @@ before_install:
 - cd Server
 - docker build -t serverimage:v1 .
 - docker network create t_network
-- docker run --network-alias server --network t_network -it serverimage:v1
+- docker run --network-alias server --network t_network -it serverimage:v1 &
 - cd ..
 - docker run --network my_net -it --rm -v "$PWD":/usr/src/project -w /usr/src/project gradle gradle -q build --info
 
