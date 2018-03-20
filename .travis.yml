@@ -1,7 +1,7 @@
 sudo: required
 
 language: java
-os : linux
+os: osx
 services:
   - docker
 
@@ -11,6 +11,9 @@ env:
     - secure: "J5Z4LmN8yqPFezlB3fdZk22hTiVdRbTkoxu3Ce5as8IwT/lqMk/V517mLHBPfHxLo3Y11rqj+Ro/reo85dunRCM3qlk0eo4JYPZiOR4ZDuH98VVrtR02g56RRpRnfJCLLLXM3qsNIuJ1KRW+O1LMlLeKSndi+nLB570JlhjoNyWwIkw82KJMylnEzaNJhWaitqTfKe0u+mhb1GEVEqQQzSum5HIwpw9eeZiPas8aIYO+sxHNKK6r7slR5EUrPr9m/hnAeyeAf07NBAcIAvrIAd1jpKlZKIeZyNdLa6s8qG81HB3Kz81PVzkBfuaa8+fZ/ZSzqdAyZ8aoS91h3QCwo/LtFJH8yoqSEN7gZzSR0SM2gENNzVakDvNfuKDYkDHxubNWXoQanK9v/18JOFi4tYkQUJha8F+QwGJYy+JCS8bxdmfByelcdsKPGV8O6o5NZNzdK+xj+Qr5+uEfRASX+2u3t6v636YoSrBYNPen6P3afM3XMtjLztUec1+eTbARBQHV1ZiasZxxBY4cT/VW8lbLG7WqAymnuIVWbaOoHSm7QWtD1t/Pt74n7kNcP3X1qNYXaK55MtBZuzZC26VD2DdL+FTyKQBBxVxuNAn5Tyej4oFU+I+3+sZtReb6n2Hal4llUe+qrCdyfNsWv3sV3WzNkVjxXydOJTyUl5vYTTA=" # DOCKER_USER
     - secure: "qWcd9KOWVf6IoDG7zlb9BeKbbEO9hS8PH1ExdZgv+5V/ajlboqsn91rcC1AClA98qOiG3u3BKMjddwBEv58CBmRP+dYtg//PAbgCRUBOcwjNaAXo/Fu2fNAfLxojrP9ulFsuJ4gkusFUS4luUr5MbeyCRu5ZNFzolHCz7srDXgrllZZeqaCJBrKYSxEesmzphmn1+FdI34nYIUug0bUBT/sL+d2F7xjCx7HQJTTMBw0b9dUmql/6LHqy2HTGTbxCcBpVgXwy4zPpCBmlhFpdMhpHGe8Bda/tlrhvpM6THqOfJv/Vim7xalHL3XM1OD4wvuv4O8m0UNGDfSvPNzJil9KblTD3DDTDQdBIWhEbpwwyddujTQJZH2yCqZYeQMLxV41GqKDR1L8wFZntEvxYJpuhTn/vrRlFPpftFiWDbmipRZ+Jir0ugRxTrpxbJ8aBRk4/qQ+S/yBPqfEU7inMECMqg8phtqHuZlxdsFQC/3OiED5Fas2b3IdoGKCXn0Cm+1QTAn784sly+0qtYzsomhzSSRvUaYc4/G+KuR56x6lEjTBeNAx+T6hNB5syfuAaW4fMYbDsDHlQddJBIDmXK7KFoi6zzqLo/cQSqeRVDt7yEMbzmgbsheyPInU4n1z5U7hVdVkPc+H8mtE4+Y8i62omHNWbi5Yj4CwudrmFgt4=" # DOCKER_PASS
     - COMMIT=${TRAVIS_COMMIT::8}
+
+before_install:
+- brew install gradle
 
 install:
 - cd Server
