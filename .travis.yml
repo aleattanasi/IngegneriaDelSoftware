@@ -12,6 +12,9 @@ env:
     - secure: "qWcd9KOWVf6IoDG7zlb9BeKbbEO9hS8PH1ExdZgv+5V/ajlboqsn91rcC1AClA98qOiG3u3BKMjddwBEv58CBmRP+dYtg//PAbgCRUBOcwjNaAXo/Fu2fNAfLxojrP9ulFsuJ4gkusFUS4luUr5MbeyCRu5ZNFzolHCz7srDXgrllZZeqaCJBrKYSxEesmzphmn1+FdI34nYIUug0bUBT/sL+d2F7xjCx7HQJTTMBw0b9dUmql/6LHqy2HTGTbxCcBpVgXwy4zPpCBmlhFpdMhpHGe8Bda/tlrhvpM6THqOfJv/Vim7xalHL3XM1OD4wvuv4O8m0UNGDfSvPNzJil9KblTD3DDTDQdBIWhEbpwwyddujTQJZH2yCqZYeQMLxV41GqKDR1L8wFZntEvxYJpuhTn/vrRlFPpftFiWDbmipRZ+Jir0ugRxTrpxbJ8aBRk4/qQ+S/yBPqfEU7inMECMqg8phtqHuZlxdsFQC/3OiED5Fas2b3IdoGKCXn0Cm+1QTAn784sly+0qtYzsomhzSSRvUaYc4/G+KuR56x6lEjTBeNAx+T6hNB5syfuAaW4fMYbDsDHlQddJBIDmXK7KFoi6zzqLo/cQSqeRVDt7yEMbzmgbsheyPInU4n1z5U7hVdVkPc+H8mtE4+Y8i62omHNWbi5Yj4CwudrmFgt4=" # DOCKER_PASS
     - COMMIT=${TRAVIS_COMMIT::8}
 
+before_install:
+- brew update && brew install gradle
+
 install:
 - cd Server
 - docker build -t serverimage:v1 .
