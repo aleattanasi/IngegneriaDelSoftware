@@ -14,8 +14,6 @@ env:
 
 before_install:
 - brew install gradle
-
-install:
 - cd Server
 - docker build -t serverimage:v1 .
 - docker network create t_network
