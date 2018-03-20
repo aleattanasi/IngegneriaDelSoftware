@@ -3,6 +3,12 @@ sudo: required
 language: java
 services:
   - docker
+  
+matrix:
+  include:
+    - env: OS='ubuntu:14.04'     
+    - env: OS='centos:7'
+
 
 env:
   global:
@@ -13,7 +19,6 @@ env:
 
 
 before_install:
-- brew install gradle
 - cd Server
 - docker build -t serverimage:v1 .
 - docker network create t_network
