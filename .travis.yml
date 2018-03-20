@@ -13,7 +13,7 @@ env:
     - COMMIT=${TRAVIS_COMMIT::8}
 
 before_install:
-- brew update && brew install gradle
+- sdk install gradle 4.6
 
 install:
 - cd Server
