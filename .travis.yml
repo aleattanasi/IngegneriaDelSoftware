@@ -1,7 +1,6 @@
 sudo: required
 
 language: java
-os: osx
 services:
   - docker
 
