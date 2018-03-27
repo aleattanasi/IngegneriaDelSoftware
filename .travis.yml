@@ -4,10 +4,7 @@ language: java
 services:
   - docker
   
-matrix:
-  include:
-    - env: OS='ubuntu:14.04'     
-    - env: OS='centos:7'
+
 
 
 env:
