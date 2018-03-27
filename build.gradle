@@ -16,11 +16,18 @@ repositories {
     jcenter()
 }
 
+
+
 dependencies {
     // The production code uses Guava
     compile 'com.google.guava:guava:20.0'
-
+//
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'
 }
 
+test {
+testLogging{
+events 'started', 'passed'
+}
+}
