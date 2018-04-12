@@ -4,6 +4,7 @@ import java.net.*;
 class Server {
     public static void main(String args[]) throws Exception {
         
+
         DatagramSocket serverSocket = new DatagramSocket(6000);
         int a,b,result=0;
         char segno;
