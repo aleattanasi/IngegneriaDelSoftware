@@ -16,8 +16,6 @@ env:
 
 
 install:
-- sudo apt-get update
-- sudo apt-get install docker-engine
 - cd Server
 - docker build -t serverimage:v1 .
 - docker network create t_network
