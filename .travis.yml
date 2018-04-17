@@ -16,8 +16,8 @@ env:
 
 install:
 - cd Server
-- docker images
 - docker build -t serverimage:v1 .
+- docker images
 - docker network create t_network
 - docker run --network-alias server --network t_network -it serverimage:v1 &
 - docker run --rm -v "$PWD":/usr/src/project -w /usr/src/project gradle gradle -q check
