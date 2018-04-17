@@ -20,5 +20,6 @@ install:
 - docker images
 - docker network create t_network
 - docker run --network-alias server --network t_network -it serverimage:v1 &
+- docker run --rm -v "$PWD":/usr/src/project -w /usr/src/project gradle gradle init --type=java-library
 - docker run --network t_network -it --rm -v "$PWD":/usr/src/project -w /usr/src/project gradle gradle -q build --info --stacktrace --debug --scan
 
