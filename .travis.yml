@@ -16,8 +16,6 @@ env:
 
 
 install:
-- docker build -t gradle .
-- docker run --rm -v "$PWD":/usr/src/project -w /usr/src/project gradle gradle init --type=java-library
 - cd Server
 - docker build -t serverimage:v1 .
 - docker images
