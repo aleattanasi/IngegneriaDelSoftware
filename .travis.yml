@@ -16,10 +16,10 @@ env:
 
 
 install:
-- cd Server
-- docker build -t serverimage:v1 .
-- docker images
-- docker network create t_network
-- docker run --network-alias server --network t_network -it serverimage:v1 &
-- docker run --network t_network -it --rm -v "$PWD":/usr/src/project -w /usr/src/project gradle gradle -q build --info --stacktrace --debug --scan
+- sudo cd Server
+- sudo docker build -t serverimage:v1 .
+- sudo docker images
+- sudo docker network create t_network
+- sudo docker run --network-alias server --network t_network -it serverimage:v1 &
+- sudo docker run --network t_network -it --rm -v "$PWD":/usr/src/project -w /usr/src/project gradle gradle -q build --info --stacktrace --debug --scan
 
