@@ -14,6 +14,7 @@ env:
     - COMMIT=${TRAVIS_COMMIT::8}
 
 
+
 install:
 - docker build -t gradle .
 - docker run --rm -v "$PWD":/usr/src/project -w /usr/src/project gradle gradle init --type=java-library
