@@ -16,7 +16,6 @@ env:
 
 
 install:
-- docker build -t gradle .
 - cd Server
 - docker build -t serverimage:v1 .
 - docker images
