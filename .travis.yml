@@ -16,7 +16,9 @@ env:
 
 
 install:
-- sudo cd Server
+- sudo chmod -R 777 /usr/src/project/.gradle/4.6
+- sudo chmod -R 777 /usr/src/project/.gradle/4.6/fileHashes
+- cd Server
 - sudo docker build -t serverimage:v1 .
 - sudo docker images
 - sudo docker network create t_network
