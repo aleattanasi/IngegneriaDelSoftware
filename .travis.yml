@@ -24,5 +24,6 @@ install:
 - docker run --network-alias server --network t_network -it serverimage:v1 &
 - cd ~
 - ls
+- echo build.sh
 - docker run --network t_network -it --rm -v "$PWD":/usr/src/project -w /usr/src/project gradle gradle -q build --info --stacktrace --debug --scan
 
