@@ -25,5 +25,5 @@ install:
 - cd ~
 - ls
 - echo build.sh
-- docker run --network t_network -it --rm -v "$PWD":/usr/src/project -w /usr/src/project gradle gradle -q build --info --stacktrace --debug --scan
+- docker run --network t_network -it --rm -v "$PWD":/ -w / gradle gradle -q build --info --stacktrace --debug --scan
 
